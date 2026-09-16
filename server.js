@@ -10,7 +10,8 @@ const GRAPH_API_VERSION = process.env.GRAPH_API_VERSION || "v26.0";
 
 app.get("/", (req, res) => {
   res.status(200).send("AGP WhatsApp Bot is running");
-})app.get("/privacy", (req, res) => {
+})
+  app.get("/privacy", (req, res) => {
   res.status(200).send(`
     <html>
       <head>
