@@ -10,6 +10,22 @@ const GRAPH_API_VERSION = process.env.GRAPH_API_VERSION || "v26.0";
 
 app.get("/", (req, res) => {
   res.status(200).send("AGP WhatsApp Bot is running");
+})app.get("/privacy", (req, res) => {
+  res.status(200).send(`
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Politique de confidentialité - AGP Communication</title>
+      </head>
+      <body>
+        <h1>Politique de confidentialité</h1>
+        <p>AGP Communication respecte la confidentialité de ses utilisateurs.</p>
+        <p>Les informations reçues via WhatsApp sont utilisées uniquement pour répondre aux demandes des clients et fournir nos services.</p>
+        <p>Nous ne vendons pas les données personnelles des utilisateurs.</p>
+        <p>Pour toute demande concernant vos données, contactez AGP Communication.</p>
+      </body>
+    </html>
+  `);
 });
 
 // Vérification du webhook Meta
